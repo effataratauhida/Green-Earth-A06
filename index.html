@@ -12,13 +12,47 @@
     <!-- Font Awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
-<body>
+<body class="max-w-[1920px] mx-auto">
     <header>
-        <div class="parent-nav">
-            <div class="logo"></div>
-            <div class="menu"></div>
-            <div class="btn-plant-tree"></div>
+        <!-- navbar -->
+        <div class="w-full mx-auto md:px-32 py-6 flex md:flex-row justify-between items-center  flex-col  bg-[#15803d] text-white">
+            <div class="logo">
+                <h2>🌿 Green Earth</h2>
+            </div>
+            <div class="menu">
+                <ul class="flex gap-6">
+                    <li><a href="" >About</a></li>
+                    <li><a href="" >Gallery</a></li>
+                    <li ><a href="">Plant a Tree</a></li>
+                </ul>
+            </div>
+            <div class="btn-plant-tree">
+                <button class="btn btn-warning text-[#15803d] bg-[#facc15] rounded-full">Plant a Tree</button>
+            </div>
         </div>
+        <!-- banner -->
+         <div class="w-full mx-auto bg-[#CFF0DC]">
+            <div class="grid md:grid-cols-3">
+                <!-- left bg img -->
+                <div>
+                    <img src="./assets/hero-leaf1.png" alt="">
+                </div>
+                  <!-- center content -->
+                <div class="p-24 text-center">
+                <h1>Plant a Tree, Grow a Future</h1>
+                <p>Join our mission to plant 1 million trees and make the Earth greener for future
+                generations.</p>
+                <button class="btn btn-warning text-[#15803d] bg-[#facc15] rounded-full border-none">Get Involved</button>
+                </div>
+                <!-- right bg img -->
+                <div>
+                    <img src="./assets/hero-leaf2.png" alt="">
+                </div>
+            </div>
+            
+            
+                
+         </div>
     </header>
     <main></main>
     <footer></footer>
