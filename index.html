@@ -58,6 +58,7 @@
     </header>
     
     <main class="bg-[#f0fdf4]">
+
         <!-- About the Campaign -->
         <div class="md:py-24 p-8 md:w-4/6 md:mx-72 w-full">
             <h1 class="font-semibold md:text-3xl text-2xl text-center text-[#1f2937]">About the Campaign</h1>
@@ -99,7 +100,35 @@
 
             </div>
         </section>
-    </main>
-    <footer></footer>
+
+        <!-- form section -->
+         <section class="bg-[#166534] py-20">
+            <h1 class="text-center font-semibold text-3xl text-white">Plant a Tree Today</h1>
+            <div class=" pt-10 md:mx-[650px] mx-5">
+                <fieldset class="fieldset bg-[#15803d] rounded-xl max-w-xl md:p-10 p-5">
+                    
+                    <input type="text" class="input w-full mt-3 rounded-md text-base" placeholder="Your Name" />
+
+                    <input type="email" class="input w-full mt-3 rounded-md text-base" placeholder="Your Email Address" />
+                    <div class="dropdown mt-3">
+                        <label tabindex="0" class="btn m-1 w-full flex justify-between items-center font-medium">Number of trees  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>1 Tree - $5</a></li>
+                            <li><a>5 Trees - $25</a></li>
+                            <li><a>10 Trees - $50</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn rounded-full mt-5 bg-[#facc15] text-[#15803d] font-medium text-base">Donate Now</button>
+                </fieldset>
+             </div>
+         </section>
+ </main>
+
+    <footer class="bg-[#14532d] text-center">
+        <p class="py-6 text-white text-base">© 2025 Green Earth. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
