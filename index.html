@@ -37,18 +37,18 @@
             <div class="grid md:grid-cols-3 md:gap-16">
                 <!-- left bg img -->
                 <div>
-                    <img src="./assets/hero-leaf1.png" alt=""  class="p-0 md:h-[400px] h-[250px]  ">
+                    <img src="./assets/hero-leaf1.png" alt=""  class="p-0 md:h-[400px] h-[250px] hidden md:block ">
                 </div>
                   <!-- center content -->
                 <div class="py-9 md:py-24 text-center">
                 <h1 class="text-2xl md:text-3xl font-bold">Plant a Tree, Grow a Future</h1>
-                <p class="mt-2 text-sm md:text-base text-[#1f2937]">Join our mission to plant 1 million trees and make the Earth greener for future
+                <p class="mt-2 text-sm md:text-base text-[#1f2937] px-3">Join our mission to plant 1 million trees and make the Earth greener for future
                 generations.</p>
                 <button class="btn mt-6 text-[#15803d] bg-[#facc15] rounded-full border-none hover:bg-[#013b17] hover:text-[#facc15] text-base font-medium">Get Involved</button>
                 </div>
                 <!-- right bg img -->
                 <div>
-                    <img src="./assets/hero-leaf2.png" alt="" class=" p-0 md:h-[400px] h-[250px]">
+                    <img src="./assets/hero-leaf2.png" alt="" class=" p-0 md:h-[400px] h-[250px] hidden md:block">
                 </div>
             </div>
             
@@ -59,10 +59,10 @@
     
     <main class="bg-[#f0fdf4]">
         <!-- About the Campaign -->
-        <div class="md:py-24 pt-8 md:w-4/6 md:mx-72 w-full">
+        <div class="md:py-24 p-8 md:w-4/6 md:mx-72 w-full">
             <h1 class="font-semibold md:text-3xl text-2xl text-center text-[#1f2937]">About the Campaign</h1>
             <div class="flex md:flex-row flex-col pt-10 gap-7 justify-between items-center">
-                <img src="./assets/about.png" alt="" class="rounded-xl h-[400px] w-[400px]">
+                <img src="./assets/about.png" alt="" class="rounded-xl md:h-[400px] w-[400px] h-96">
                 <div class="text-base mx-4">
                     <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>
                     <ul class="mt-5 list-disc pl-5">
@@ -74,6 +74,31 @@
                 </div>
             </div>
         </div>
+
+        <!-- our impact -->
+        <section class="md:py-20 md:px-32 py-8 px-4 bg-[#cff0dc]">
+ 
+            <h1 class="font-semibold text-3xl text-center">Our Impact</h1>
+
+            <div class="flex md:flex-row flex-col justify-between items-center mt-10 gap-8">
+                <!-- card 1 -->
+                <div class="text-center p-10 h-32 md:w-[400px] w-80 bg-white rounded-xl hover:bg-gray-300">
+                    <h2 class="text-[#15803d] text-3xl  font-semibold ">500K+</h2>
+                    <p class="text-[#1f2937]/80 text-base">Trees Planted</p>
+                </div>
+                <!-- card 2 -->
+                <div class="text-center p-10 h-32 md:w-[400px] w-80 bg-white rounded-xl hover:bg-gray-300">
+                    <h2 class="text-[#15803d] text-3xl  font-semibold ">120+</h2>
+                    <p class="text-[#1f2937]/80 text-base">Communities Involved</p>
+                </div>
+                <!-- card 3 -->
+                <div class="text-center p-10 h-32 md:w-[400px] w-80 bg-white rounded-xl hover:bg-gray-300">
+                    <h2 class="text-[#15803d] text-3xl  font-semibold ">30+</h2>
+                    <p class="text-[#1f2937]/80 text-base">Trees Planted</p>
+                </div>
+
+            </div>
+        </section>
     </main>
     <footer></footer>
 </body>
