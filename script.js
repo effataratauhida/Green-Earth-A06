@@ -24,7 +24,7 @@ const displayPlantsDetail = (modPlants) => {
      detailsBox.innerHTML = `
      
             <h2 class="font-semibold text-lg">${plant.name}</h2>
-            <img src="${plant.image}" alt="" class="w-full h-48 mt-3">
+            <img src="${plant.image}" alt="" class="w-full h-64 mt-3">
             <p class="mt-3"><span class="font-semibold">Category:</span>${plant.category}</p>
             <p class="mt-3"><span class="font-semibold">Price:</span> ৳${plant.price}</p>
             <p class="mt-3"><span class="font-semibold">Description:</span>${plant.description} </p>
@@ -48,16 +48,16 @@ for (let plant of sixPlant){
     
     const cardDiv = document.createElement("div");
     cardDiv.innerHTML = `
-        <div  class="card bg-base-100 w-full h-[420px]  shadow-sm  rounded-lg ">
+        <div  class="card bg-base-100 w-full h-[500px]  shadow-sm  rounded-lg ">
             <div class="card-body p-2">
-                <img src="${plant.image}" alt="" class="max-w-full h-48">
+                <img src="${plant.image}" alt="" class="max-w-full h-64">
                 <h1 class="text-lg font-semibold"  onclick="loadPlantsDetail(${plant.id})" >${plant.name}</h1>
                 <p class="text-xs">${plant.description}</p>
                 <div class="flex justify-between items-center gap-24">
                     <p class=" bg-[#dcfce7] rounded-lg py-1 px-1 border-green-700 border text-[#15803d] text-sm font-semibold text-center">${plant.category}</p>
                     <p class="font-semibold ">৳${plant.price}</p>
                 </div>
-                <button class="btn bg-[#15803d] rounded-full w-11/12  mx-1 mt-2  text-white hover:bg-[#013b17]">Add to Cart</button>
+                <button class="btn bg-[#15803d] rounded-full w-full  mx-1 mt-2  text-white hover:bg-[#013b17]">Add to Cart</button>
             </div>
         </div>`
 

@@ -60,12 +60,13 @@
     <main class="bg-[#f0fdf4]">
 
         <!-- choose your trees -->
-         <section class="md:px-28 md:pt-24 pt-6">
+         <section class="md:px-28 md:pt-20 pt-6">
             <h1 class="text-3xl font-semibold text-center">Choose Your Trees</h1>
             <div class="parent mt-10 gap-5 grid md:grid-cols-12">
                 <!-- left -->
-                 <div class=" md:col-span-2 col-span-12  mx-30 md:mx-0">
+                 <div class=" md:col-span-2 col-span-12  mx-25 md:mx-0">
                     <h1 class="mb-4 text-xl font-semibold">Categories</h1>
+                    <p id="all_tress_btn" class="hover:bg-[#15803d] hover:text-white py-2 px-2 font-medium">All Trees</p>
                     <div id="categoryContainer" ></div>
                     <!-- <p>All Trees</p>
                      -->
@@ -74,12 +75,19 @@
                  <!-- center -->
                  <!--get the first 6 plants card by api -->
                 <div  class="bg-green-300  md:col-span-8 col-span-12 max-w-5xl md:mx-auto mx-4">
-                    <div id="plants-container" class="grid md:grid-cols-3 grid-cols-1 md:gap-3 gap-4"> </div>
+                    <div id="plants-container" class="grid md:grid-cols-3 grid-cols-1 md:gap-2 gap-3"> </div>
                 </div>
+
+                <!-- get plants by category -->
+                 <!-- <div  class="bg-green-300  md:col-span-8 col-span-12 max-w-5xl md:mx-auto mx-4">
+                    <div id="get_plants_Container" class="grid md:grid-cols-3 grid-cols-1 md:gap-2 gap-3"></div>
+                 </div> -->
+                
+
                 
                 <!-- right -->
                 <div class="bg-pink-300 md:col-span-2 col-span-12">
-                    <h1 class="text-xl font-semibold p-4">Your Cart</h1>
+                    <h1 class="text-xl font-semibold p-4 mb-5">Your Cart</h1>
                 </div>
             </div>
          </section>
@@ -158,15 +166,14 @@
 
 
 
-<!-- Open the modal using ID.showModal() method -->
-<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<!-- modal -->
 <dialog id="plant_modal" class="modal modal-bottom sm:modal-middle">
   <div class="modal-box">
     <div id="detail-container" >
  </div>
     <div class="modal-action">
       <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
+        
         <button class="btn">Close</button>
       </form>
     </div>
