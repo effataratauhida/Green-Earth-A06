@@ -62,31 +62,23 @@
         <!-- choose your trees -->
          <section class="md:px-28 md:pt-20 pt-6">
             <h1 class="text-3xl font-semibold text-center">Choose Your Trees</h1>
-            <div class="parent mt-10 gap-5 grid md:grid-cols-12">
+            <div class="parent mt-10 gap-5 grid md:grid-cols-5">
                 <!-- left -->
-                 <div class=" md:col-span-2 col-span-12  mx-25 md:mx-0">
+                <div class=" md:col-span-1  col-start-5  md:mx-0 ">
                     <h1 class="mb-4 text-xl font-semibold">Categories</h1>
-                    <p id="all_tress_btn" class="hover:bg-[#15803d] hover:text-white py-2 px-2 font-medium">All Trees</p>
+                    <a href="./index.html" id="all_tress_btn" class="hover:bg-[#15803d] hover:text-white py-2 pl-2 md:pr-28  font-medium ">
+                        All Trees</a>
+                    
                     <div id="categoryContainer" ></div>
-                    <!-- <p>All Trees</p>
-                     -->
-                 </div>
-
-                 <!-- center -->
-                 <!--get the first 6 plants card by api -->
-                <div  class="bg-green-300  md:col-span-8 col-span-12 max-w-5xl md:mx-auto mx-4">
-                    <div id="plants-container" class="grid md:grid-cols-3 grid-cols-1 md:gap-2 gap-3"> </div>
                 </div>
-
-                <!-- get plants by category -->
-                 <!-- <div  class="bg-green-300  md:col-span-8 col-span-12 max-w-5xl md:mx-auto mx-4">
-                    <div id="get_plants_Container" class="grid md:grid-cols-3 grid-cols-1 md:gap-2 gap-3"></div>
-                 </div> -->
-                
-
+                 <!-- center -->
+                 <!--get all the plants card by api -->
+                <div  class=" md:col-span-3 col-span-12  max-w-5xl md:mx-auto mx-4 ">
+                    <div id="plants-container" class="grid md:grid-cols-3 grid-cols-1 md:gap-2 gap-4"> </div>
+                </div>
                 
                 <!-- right -->
-                <div class="bg-pink-300 md:col-span-2 col-span-12">
+                <div class= "md:col-span-1 col-span-12 ">
                     <h1 class="text-xl font-semibold p-4 mb-5">Your Cart</h1>
                 </div>
             </div>
@@ -94,9 +86,10 @@
 
 
 <!-- About the Campaign -->
-        <div class="md:py-24 p-8 md:w-4/6 md:mx-72 w-full">
+ <div class=" flex items-center justify-center ">
+     <div class="md:py-16 p-8 md:w-4/6 w-full ">
             <h1 class="font-semibold md:text-3xl text-2xl text-center text-[#1f2937]">About the Campaign</h1>
-            <div class="flex md:flex-row flex-col pt-10 gap-7 justify-between items-center">
+            <div class="flex md:flex-row flex-col pt-10 gap-7 justify-between items-center ">
                 <img src="./assets/about.png" alt="" class="rounded-xl md:h-[400px] w-[400px] h-80">
                 <div class="text-base mx-4">
                     <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>
@@ -110,6 +103,8 @@
             </div>
         </div>
 
+ </div>
+       
         <!-- our impact -->
         <section class="md:py-20 md:px-32 py-8 px-4 bg-[#cff0dc]">
  
@@ -186,7 +181,7 @@
 
 
 
-    <script src="./script.js"></script>
-    <script src="./sc.js"></script>
+    <script src="./alltrees.js"></script>
+    <script src="./category.js"></script>
 </body>
 </html>
