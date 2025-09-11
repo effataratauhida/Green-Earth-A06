@@ -14,6 +14,7 @@
     <!-- style.css file -->
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body class="max-w-[1920px] mx-auto inter-font">
     <header>
         <!-- navbar -->
@@ -33,7 +34,7 @@
             </div>
         </div>
         <!-- banner -->
-         <div class="w-full mx-auto bg-[#CFF0DC]">
+        <div class="w-full mx-auto bg-[#CFF0DC]">
             <div class="grid md:grid-cols-3 md:gap-16">
                 <!-- left bg img -->
                 <div>
@@ -54,7 +55,7 @@
             
             
                 
-         </div>
+        </div>
     </header>
     
     <main class="bg-[#f0fdf4]">
@@ -62,31 +63,38 @@
         <!-- choose your trees -->
          <section class="md:px-28 md:pt-20 pt-6">
             <h1 class="text-3xl font-semibold text-center">Choose Your Trees</h1>
-            <div class="parent mt-10 gap-5 grid md:grid-cols-5">
+            <div class=" mt-10 gap-5 grid-cols-1 grid  md:grid-cols-5">
                 <!-- left -->
-                <div class=" md:col-span-1  col-start-5  md:mx-0 ">
+                 
+                <div class=" md:col-span-1 col-start-2 col-end-6  md:mx-0 ">
                     <h1 class="mb-4 text-xl font-semibold">Categories</h1>
                     <a href="./index.html" id="all_tress_btn" class="hover:bg-[#15803d] hover:text-white py-2 pl-2 md:pr-28  font-medium ">
                         All Trees</a>
-                    
                     <div id="categoryContainer" ></div>
+                </div>
+
+                <!-- Loading spinner -->
+
+                <div id="spinner" class=" flex justify-center my-10 hidden">
+                    <span class="loading loading-dots loading-xl text-green-700"></span>
                 </div>
                  <!-- center -->
                  <!--get all the plants card by api -->
-                <div  class=" md:col-span-3 col-span-12  max-w-5xl md:mx-auto mx-4 ">
-                    <div id="plants-container" class="grid md:grid-cols-3 grid-cols-1 md:gap-2 gap-4"> </div>
+                <div class=" md:col-span-3 col-span-12  max-w-5xl md:mx-auto mx-4 ">
+                    <div id="plants-container" class="grid md:grid-cols-3 grid-cols-1 md:gap-2 gap-4 hidden"> </div>
                 </div>
                 
                 <!-- right -->
-                <div class= "md:col-span-1 col-span-12 ">
-                    <h1 class="text-xl font-semibold p-4 mb-5">Your Cart</h1>
+                <div class= "md:col-span-1 col-span-12 bg-white rounded-lg max-h-[500px] overflow-y-auto">
+                    <h1 class="text-xl font-semibold pt-4 mb-5 mx-2">Your Cart</h1>
+                    <div id="cart-container" class="space-y-2 mx-2"></div>
+                    
                 </div>
             </div>
          </section>
-
-
-<!-- About the Campaign -->
- <div class=" flex items-center justify-center ">
+        
+         <!-- About the Campaign -->
+        <div class=" flex items-center justify-center ">
      <div class="md:py-16 p-8 md:w-4/6 w-full ">
             <h1 class="font-semibold md:text-3xl text-2xl text-center text-[#1f2937]">About the Campaign</h1>
             <div class="flex md:flex-row flex-col pt-10 gap-7 justify-between items-center ">
@@ -103,7 +111,7 @@
             </div>
         </div>
 
- </div>
+        </div>
        
         <!-- our impact -->
         <section class="md:py-20 md:px-32 py-8 px-4 bg-[#cff0dc]">
@@ -133,7 +141,7 @@
         <!-- form section -->
          <section class="bg-[#166534] md:py-20 py-8">
             <h1 class="text-center font-semibold text-3xl text-white">Plant a Tree Today</h1>
-            <div class=" pt-10 md:mx-auto max-w-xl mx-5">
+            <div class=" pt-10 md:mx-auto max-w-xl sm:mx-auto mx-4">
                 <fieldset class="fieldset bg-[#15803d] rounded-xl md:p-10 p-5">
                     
                     <input type="text" class="input w-full mt-3 rounded-md text-base" placeholder="Your Name" />
@@ -152,7 +160,7 @@
                 </fieldset>
              </div>
          </section>
- </main>
+    </main>
 
     <footer class="bg-[#14532d] text-center">
         <p class="py-6 text-white text-base">© 2025 Green Earth. All Rights Reserved.</p>
@@ -161,27 +169,21 @@
 
 
 
-<!-- modal -->
-<dialog id="plant_modal" class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box">
-    <div id="detail-container" >
- </div>
-    <div class="modal-action">
-      <form method="dialog">
-        
-        <button class="btn">Close</button>
-      </form>
-    </div>
-  </div>
-</dialog>
-
-
-
-
-
-
+    <!-- modal -->
+    <dialog id="plant_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="detail-container" >
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 
     <script src="./alltrees.js"></script>
     <script src="./category.js"></script>
+    <script src="./cart.js"></script>
 </body>
 </html>

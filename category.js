@@ -1,6 +1,8 @@
 const categoryContainer = document.getElementById('categoryContainer');
 const plantsContainer = document.getElementById('plants-container');
 
+
+//  all tree btn --> bg
 const treeBtn = document.getElementById("all_tress_btn");
 
 const clearActive = () => {
@@ -21,7 +23,6 @@ const loadCategory = () => {
     fetch('https://openapi.programming-hero.com/api/categories')
     .then(response => response.json())
     .then(data => {
-        
         const categories = data.categories
         categories.forEach(cat => {
         categoryContainer.innerHTML += `
@@ -36,29 +37,34 @@ const loadCategory = () => {
         getPlantsByCategory(e.target.id)
     }
 })
-    .catch(error => {
+})
+  .catch(error => {
          //console.log(error);
             
     });
-});
 };
 
 // get plants by category
 
 const getPlantsByCategory = (categoryId) =>{
+
+    spinner.classList.remove('hidden');
+    plantsContainer.classList.add('hidden');
     
     fetch(`https://openapi.programming-hero.com/api/category/${categoryId}`)
     .then(res => res.json())
     .then(data => {
         showPlantsByCategory(data.plants);
+
+        spinner.classList.add('hidden');
+        plantsContainer.classList.remove('hidden');
     })
     .catch(err => {
         //console.log(err)
+        alert(`Problem while loading data!!`);
+        spinner.classList.add('hidden');
     })
 }
-
-
-
 
 // show plants 
 const showPlantsByCategory = (plants) => {
@@ -81,7 +87,9 @@ const showPlantsByCategory = (plants) => {
                         <p class=" bg-[#dcfce7] rounded-lg py-1 px-1 border-green-700 border text-[#15803d] text-sm font-semibold text-center">${plant.category}</p>
                         <p class="font-semibold text-right">৳${plant.price}</p>
                     </div>
-                    <button class="btn bg-[#15803d] rounded-full w-full  mx-1 mt-2  text-white hover:bg-[#013b17]">Add to Cart</button>
+                    <button class="btn bg-[#15803d] rounded-full w-full  mx-1 mt-2  text-white hover:bg-[#013b17]"
+                    onclick="addToCart(${plant.id}, '${plant.name}', ${plant.price})">
+                    Add to Cart</button>
                 </div>
             </div>
             `;
