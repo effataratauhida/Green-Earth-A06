@@ -16,7 +16,6 @@ const itemsInCart = cart.find(item => item.id === id);
 };
 
 // alert message 
-
 const showAlert = (name) => {
     alert(`${name} has been added to the cart.`)
 }
@@ -55,16 +54,13 @@ const displayCart = () => {
     crossBtn.addEventListener('click', () => {
         removeItem(item.id);
     })
-
         div.appendChild(crossBtn);
         cartContainer.appendChild(div);
     });
 
-    // মোট দাম
     const totalDiv = document.createElement("div");
     totalDiv.classList.add("flex", "justify-between", "items-center", "px-2", "py-2", "mt-2", "font-bold");
     totalDiv.innerHTML = `
-        
         <p>Total:</p>
         <p>৳${total}</p>
     `;
